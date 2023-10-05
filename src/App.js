@@ -1,27 +1,28 @@
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import AddUser from "./Pages/AddUser";
+import UpdateUser from "./Pages/UpdateUser";
+import { fetchUsers } from "./redux/Actions/userAction";
+import { useDispatch } from "react-redux";
+import Navbar from "./Components/Navbar";
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add" element={<AddUser />} />
+          <Route path="/update/:id" element={<UpdateUser />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,0 +1,49 @@
+.btn{
+    border: 1px solid rgba(0, 0, 0, 0.644);
+    padding: 0.3rem 0.75rem;
+    border-radius: 0.3rem;
+    background-color: white;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    max-width: fit-content;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-primary, 
+.btn-primary > *{
+    color: #3e82ff;
+    border-color: #3e82ff;
+}
+
+.btn-primary:hover{
+    background: rgba(62, 130, 255, 0.5);
+    color: white;
+}
+
+.btn-primary:focus{
+    background-color: rgba(62, 130, 255, 0.8);
+    color: white;
+}
+
+.btn-secondary,
+.btn-secondary > *{
+    color: #CE93D8;
+    border-color: #CE93D8;
+}
+
+.btn-secondary:hover{
+    background: rgba(205, 146, 216, 0.5);
+    color: white;
+}
+.btn-secondary:focus{
+    background-color: rgba(205, 146, 216, 0.8);
+    color: white;
+}
+
+.btn-primary:hover > * ,
+.btn-secondary:hover > *{
+    color: white;
+}

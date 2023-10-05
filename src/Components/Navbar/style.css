@@ -1,0 +1,32 @@
+.navbar{
+    display: flex;
+    background-color: #1b1b1b91;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+}
+
+.nav-links{
+    flex-grow: 0.1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+
+.nav-links a{
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover{
+    color: pink;
+}
+
+.brand h1{
+    transition: all 0.3s ease;
+}
+
+.brand h1:hover{
+    color: pink;
+    cursor: default;
+}

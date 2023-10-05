@@ -1,0 +1,28 @@
+.tr-user{
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.tr-user > td{
+    padding: 1rem;
+    text-align: center;
+}
+.td-email{
+    position: relative;
+}
+.td-avatar > img{
+    border-radius: 50%;
+}
+.edit-btn{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+.tr-user:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.tr-user:hover .edit-btn{
+    display: block;
+}
+

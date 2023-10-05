@@ -1,0 +1,42 @@
+input{
+    padding: 0.75rem 1rem;
+    border: 1px solid #c9c8c8;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid #3e82ff;
+}
+
+input[type="file"]{
+    border: none;
+    pointer-events: none;
+}
+input::file-selector-button{
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #7e7c7c;
+    background-color: #fff;
+    color: #7e7c7c;
+    pointer-events: all;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+input::file-selector-button:hover{
+    border: 1px solid #3e82ff;
+    color: #3e82ff;
+    background-color: #fff;
+}
+
+input::file-selector-button:active{
+    outline: none;
+    background-color: #c1d1f0a4;
+    border: 1px solid #2c75fd;
+    color: #2c75fd;
+}
